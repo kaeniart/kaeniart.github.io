@@ -8,5 +8,5 @@
     "slide2Description": "Description for the second slide.",
     "slide3Title": "Third Slide",
     "slide3Description": "Description for the third slide.",
-    "footerText": "&copy; 2024 My Slideshow. All rights reserved."
+    "footerText": "&copy; {{year}} Kaeni Art. All rights reserved."
 }

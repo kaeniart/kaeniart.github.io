@@ -13,7 +13,7 @@ function loadTranslations(lang) {
 function updateLanguage(lang) {
     const { title, navHome, navAbout, slide1Title, slide1Description, slide2Title, slide2Description, slide3Title, slide3Description, footerText } = translations[lang];
 
-    document.getElementById('navbar-title').textContent = title;
+	document.getElementById('navbar-title').textContent = "Kaeni Art";
     document.getElementById('nav-home').textContent = navHome;
     document.getElementById('nav-about').textContent = navAbout;
     document.getElementById('slide1-title').textContent = slide1Title;
@@ -29,14 +29,22 @@ function updateLanguage(lang) {
 // Initialize by loading English translations
 loadTranslations('en');
 
+function updateFooterText(lang) {
+	const year = new Date().getFullYear();
+	const footerTemplate = translations[lang].footerText;
+	const footerText = footerTemplate.replace("{{year}}", year);
+	document.getElementById('footer-text').innerHTML = footerText;
+}
+
 // Language selector event listeners
-document.querySelectorAll('.flag-icons').forEach(flag => {
-    flag.addEventListener('click', () => {
-        const lang = flag.getAttribute('data-lang');
-        if (!translations[lang]) {
-            loadTranslations(lang);
-        } else {
-            updateLanguage(lang);
-        }
-    });
+document.querySelectorAll('.language-option').forEach(option => {
+	option.addEventListener('click', () => {
+		const lang = option.getAttribute('data-lang');
+		if (!translations[lang]) {
+			loadTranslations(lang);
+		} else {
+			updateLanguage(lang);
+			updateFooterText(lang); // Update footer text for selected language
+		}
+	});
 });

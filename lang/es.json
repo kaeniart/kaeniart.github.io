@@ -8,5 +8,5 @@
     "slide2Description": "Descripción de la segunda diapositiva.",
     "slide3Title": "Tercera Diapositiva",
     "slide3Description": "Descripción de la tercera diapositiva.",
-    "footerText": "&copy; 2024 Mi Presentación. Todos los derechos reservados."
+    "footerText": "&copy; {{year}} Kaeni Art. Todos los derechos reservados."
 }

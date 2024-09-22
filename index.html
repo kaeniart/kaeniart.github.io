@@ -16,38 +16,25 @@
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#" id="navbar-title">My Slideshow</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#" id="nav-home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="nav-about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" id="nav-contact">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <div id="language-selector" class="form-select">
-                        <div class="flag-icons" style="display: flex; cursor: pointer;" data-lang="en" title="English">
-                            <i class="fas fa-flag-usa"></i>
-                        </div>
-                        <div class="flag-icons" style="display: flex; cursor: pointer;" data-lang="es" title="Español">
-                            <i class="fas fa-flag"></i>
-                        </div>
-                        <div class="flag-icons" style="display: flex; cursor: pointer;" data-lang="fr" title="Français">
-                            <i class="fas fa-flag-france"></i>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" id="navbar-title" href="#"></a>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" id="nav-home" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" id="nav-about" href="#">About</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.instagram.com/kaenisei" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <div id="language-selector" class="form-select">
+                    <div class="language-option" style="cursor: pointer;" data-lang="en" title="English">English</div>
+                    <div class="language-option" style="cursor: pointer;" data-lang="es" title="Español">Español</div>
+                    <div class="language-option" style="cursor: pointer;" data-lang="fr" title="Français">Français</div>
+                </div>
+            </li>
+        </ul>
     </div>
 </nav>
 

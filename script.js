@@ -11,12 +11,11 @@ function loadTranslations(lang) {
 }
 
 function updateLanguage(lang) {
-    const { title, navHome, navAbout, navContact, slide1Title, slide1Description, slide2Title, slide2Description, slide3Title, slide3Description, footerText } = translations[lang];
+    const { title, navHome, navAbout, slide1Title, slide1Description, slide2Title, slide2Description, slide3Title, slide3Description, footerText } = translations[lang];
 
     document.getElementById('navbar-title').textContent = title;
     document.getElementById('nav-home').textContent = navHome;
     document.getElementById('nav-about').textContent = navAbout;
-
     document.getElementById('slide1-title').textContent = slide1Title;
     document.getElementById('slide1-description').textContent = slide1Description;
     document.getElementById('slide2-title').textContent = slide2Title;

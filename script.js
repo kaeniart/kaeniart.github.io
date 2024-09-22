@@ -16,7 +16,6 @@ function updateLanguage(lang) {
     document.getElementById('navbar-title').textContent = title;
     document.getElementById('nav-home').textContent = navHome;
     document.getElementById('nav-about').textContent = navAbout;
-    document.getElementById('nav-contact').textContent = navContact;
 
     document.getElementById('slide1-title').textContent = slide1Title;
     document.getElementById('slide1-description').textContent = slide1Description;

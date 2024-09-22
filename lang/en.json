@@ -1,0 +1,13 @@
+{
+    "title": "My Slideshow",
+    "navHome": "Home",
+    "navAbout": "About",
+    "navContact": "Contact",
+    "slide1Title": "First Slide",
+    "slide1Description": "Description for the first slide.",
+    "slide2Title": "Second Slide",
+    "slide2Description": "Description for the second slide.",
+    "slide3Title": "Third Slide",
+    "slide3Description": "Description for the third slide.",
+    "footerText": "&copy; 2024 My Slideshow. All rights reserved."
+}

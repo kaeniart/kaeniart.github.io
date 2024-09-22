@@ -39,7 +39,7 @@ loadTranslations('en');
 function updateFooterText(lang) {
 	const year = new Date().getFullYear();
 	const footerTemplate = translations[lang].footerText;
-	const footerText = footerTemplate.replace("{{year}}", `2011-${currentYear}`);
+	const footerText = footerTemplate.replace("{{year}}", `2011-${year}`);
 	document.getElementById('footer-text').innerHTML = footerText;
 }
 

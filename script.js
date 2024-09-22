@@ -1,27 +1,16 @@
+
 let translations = {};
 
 function loadTranslations(lang) {
-    fetch(`lang/${lang}.json`)
-        .then(response => response.json())
-        .then(data => {
-            translations[lang] = data;
-            updateLanguage(lang); // Update language after loading
-        })
-        .catch(error => console.error('Error loading translation:', error));
+	fetch(`lang/${lang}.json`)
+		.then(response => response.json())
+		.then(data => {
+			translations[lang] = data;
+			updateLanguage(lang); // Update language after loading
+			updateFooterText(lang); // Update footer after loading
+		})
+		.catch(error => console.error('Error loading translation:', error));
 }
-
-    let translations = {};
-
-    function loadTranslations(lang) {
-        fetch(`lang/${lang}.json`)
-            .then(response => response.json())
-            .then(data => {
-                translations[lang] = data;
-                updateLanguage(lang); // Update language after loading
-                updateFooterText(lang); // Update footer after loading
-            })
-            .catch(error => console.error('Error loading translation:', error));
-    }
 
 function updateLanguage(lang) {
 	const { title, navHome, navAbout, slide1Title, slide1Description, slide2Title, slide2Description, slide3Title, slide3Description } = translations[lang];
@@ -37,8 +26,9 @@ function updateLanguage(lang) {
 	document.getElementById('slide3-title').textContent = slide3Title;
 	document.getElementById('slide3-description').textContent = slide3Description;
 
-	// Update the current language display
-	document.getElementById('current-language').textContent = lang === 'en' ? 'English' : lang === 'es' ? 'Español' : 'Français';
+	// Update the current language display in the dropdown
+	const languageText = lang === 'en' ? 'English' : lang === 'es' ? 'Español' : 'Français';
+	document.getElementById('current-language').textContent = languageText;
 }
 
 // Initialize by loading English translations
@@ -55,7 +45,8 @@ function updateFooterText(lang) {
 
 // Language selector event listeners
 document.querySelectorAll('.language-option').forEach(option => {
-	option.addEventListener('click', () => {
+	option.addEventListener('click', (e) => {
+		e.preventDefault(); // Prevent default link behavior
 		const lang = option.getAttribute('data-lang');
 		if (!translations[lang]) {
 			loadTranslations(lang);
